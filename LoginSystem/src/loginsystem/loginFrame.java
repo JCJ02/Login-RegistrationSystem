@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package loginsystem;
+import java.awt.Color;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -29,7 +30,7 @@ public class loginFrame extends javax.swing.JFrame {
     
     public void Connection() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver"); //com.mysql.jdbc.Driver
             connection = DriverManager.getConnection("jdbc:mysql://localhost/teknolohiyadb", "root", "");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(registrationFrame.class.getName()).log(Level.SEVERE, null, ex);
@@ -223,11 +224,11 @@ public class loginFrame extends javax.swing.JFrame {
                 .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
+                .addGap(45, 45, 45)
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(signUpBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(100, 100, 100))
+                .addGap(81, 81, 81))
             .addComponent(sidePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -251,7 +252,7 @@ public class loginFrame extends javax.swing.JFrame {
         String password = new String(passwordField.getPassword());
         
         try { 
-            prepared_Statement = connection.prepareStatement("SELECT Username, Password FROM user_account_table");
+            prepared_Statement = connection.prepareStatement("SELECT * FROM user_account_table");
             result_Set = prepared_Statement.executeQuery();
             
             while(result_Set.next()) {
@@ -262,18 +263,13 @@ public class loginFrame extends javax.swing.JFrame {
                 
                 // Conditional Statement
                 if(username.equals(USERNAME) && password.equals(PASSWORD)) {
-                    JOptionPane.showMessageDialog(rootPane, "Successfully Logged In!", "MESSAGE", JOptionPane.INFORMATION_MESSAGE);
-                }else {
-                    if(!username.equals(USERNAME) && password.equals(PASSWORD)) {
-                        JOptionPane.showMessageDialog(rootPane, "Incorrect Username", "ERROR MESSAGE", JOptionPane.ERROR_MESSAGE);
-                    }else if(username.equals(USERNAME) && !password.equals(PASSWORD)) {
-                        JOptionPane.showMessageDialog(rootPane, "Incorrect Password", "ERROR MESSAGE", JOptionPane.ERROR_MESSAGE);
-                    }else if(!username.equals(USERNAME) && !password.equals(PASSWORD)) {
-                        JOptionPane.showMessageDialog(rootPane, "Incorrect Username and Password", "ERROR MESSAGE", JOptionPane.ERROR_MESSAGE);
-                    }
+                    JOptionPane.showMessageDialog(rootPane, "SUCCESSFULY LOGGED IN!", "MESSAGE", JOptionPane.INFORMATION_MESSAGE);                     
+                }else if(!username.equals(USERNAME) && password.equals(PASSWORD)) {
+                    JOptionPane.showMessageDialog(rootPane, "INCORRECT USERNAME!", "MESSAGE", JOptionPane.INFORMATION_MESSAGE);
+                }else if(username.equals(USERNAME) && !password.equals(PASSWORD)) {
+                   JOptionPane.showMessageDialog(rootPane, "INCORRECT PASSWORD!", "MESSAGE", JOptionPane.INFORMATION_MESSAGE);
                 }
-                 
-            
+                  
             }
             
         } catch (SQLException ex) {

@@ -31,7 +31,7 @@ public class registrationFrame extends javax.swing.JFrame {
     
     public void Connection() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://localhost/teknolohiyadb", "root", "");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(registrationFrame.class.getName()).log(Level.SEVERE, null, ex);
@@ -297,11 +297,11 @@ public class registrationFrame extends javax.swing.JFrame {
                 .addComponent(registrationPassLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(registrationPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(registrationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(registrationLoginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(regstrationSignUpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46))
+                .addGap(34, 34, 34))
             .addComponent(registrationSidePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -339,16 +339,16 @@ public class registrationFrame extends javax.swing.JFrame {
         // Sign up button
         
         // Initialize variables
-        String lastName = registrationFNameField.getText();
-        String firstName = registrationLNameField.getText();
+        String lastName = registrationLNameField.getText();
+        String firstName = registrationFNameField.getText();
         String phoneNum = registrationPhoneNumField.getText();
         String username = registrationUNameField.getText();
         String password = new String(registrationPasswordField.getPassword());
         
         try {
             prepared_Statement = connection.prepareStatement("INSERT INTO user_account_table(Lastname, Firstname, GENDER, Phone_Number, Username, Password) VALUES (?,?,?,?,?,?)");
-            prepared_Statement.setString(1, firstName);
-            prepared_Statement.setString(2, lastName);
+            prepared_Statement.setString(1, lastName);
+            prepared_Statement.setString(2, firstName);
             prepared_Statement.setString(3, gender);
             prepared_Statement.setString(4, phoneNum);
             prepared_Statement.setString(5, username);
@@ -358,7 +358,7 @@ public class registrationFrame extends javax.swing.JFrame {
             int executeUpdate = prepared_Statement.executeUpdate();
             
             if(executeUpdate == 1) {
-                JOptionPane.showMessageDialog(rootPane, "YOU HAVE SUCCESSFULLY REGISTERED!", "MESSAGE", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane, "You have SUCCESSFULLY REGISTERED!", "MESSAGE", JOptionPane.INFORMATION_MESSAGE);
                 
                 // Reset
                 registrationFNameField.setText("");
