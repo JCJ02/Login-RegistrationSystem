@@ -44,7 +44,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="registrationPanel" alignment="0" max="32767" attributes="0"/>
+          <Component id="registrationPanel" alignment="0" pref="595" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -65,55 +65,61 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="registrationSidePanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="60" max="32767" attributes="0"/>
+                  <EmptySpace pref="59" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="registrationExitBtn" alignment="1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="registrationLNameField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="registrationLNameLabel" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="registrationFNameLabel" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="registrationFNameField" alignment="1" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="registrationGenderLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="47" max="32767" attributes="0"/>
-                                      <Component id="maleRadioBtn" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="femaleRadioBtn" min="-2" pref="120" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="registrationPhoneNumLabel1" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="registrationPhoneNumField" alignment="1" min="-2" pref="353" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="registrationUNameLabel1" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="registrationUNameField" alignment="1" min="-2" pref="353" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="registrationPasswordField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="registrationPassLabel" alignment="0" min="-2" pref="353" max="-2" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="registrationLNameField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="registrationLNameLabel" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="registrationFNameLabel" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="registrationFNameField" alignment="1" max="32767" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="registrationLoginBtn" min="-2" pref="165" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="regstrationSignUpBtn" min="-2" pref="165" max="-2" attributes="0"/>
+                                          <Component id="registrationGenderLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace pref="47" max="32767" attributes="0"/>
+                                          <Component id="maleRadioBtn" min="-2" pref="100" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="femaleRadioBtn" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="registrationPhoneNumLabel1" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="registrationPhoneNumField" alignment="1" min="-2" pref="353" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="registrationUNameLabel1" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="registrationUNameField" alignment="1" min="-2" pref="353" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="registrationPasswordField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="registrationPassLabel" alignment="0" min="-2" pref="353" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="registrationLoginBtn" min="-2" pref="165" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="regstrationSignUpBtn" min="-2" pref="165" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="registrationExitBtn" min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="showPassChckBox" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <Component id="registrationExitBtn" min="-2" pref="40" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="550" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="registrationLNameLabel" min="-2" pref="35" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="registrationLNameField" min="-2" pref="35" max="-2" attributes="0"/>
@@ -139,12 +145,14 @@
                   <Component id="registrationPassLabel" min="-2" pref="35" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="registrationPasswordField" min="-2" pref="35" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="showPassChckBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="registrationLoginBtn" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="regstrationSignUpBtn" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               </Group>
               <Component id="registrationSidePanel" alignment="0" max="32767" attributes="0"/>
           </Group>
@@ -489,6 +497,17 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="showPassChckBox">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="15" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Show Password"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="showPassChckBoxMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -65,6 +65,7 @@ public class loginFrame extends javax.swing.JFrame {
         loginBtn = new javax.swing.JButton();
         loginLogo = new javax.swing.JLabel();
         signUpBtn1 = new javax.swing.JButton();
+        showPassChckBox = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -182,6 +183,14 @@ public class loginFrame extends javax.swing.JFrame {
             }
         });
 
+        showPassChckBox.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        showPassChckBox.setText("Show Password");
+        showPassChckBox.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                showPassChckBoxMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout loginPanelLayout = new javax.swing.GroupLayout(loginPanel);
         loginPanel.setLayout(loginPanelLayout);
         loginPanelLayout.setHorizontalGroup(
@@ -199,15 +208,17 @@ public class loginFrame extends javax.swing.JFrame {
                                 .addComponent(loginLogo))
                             .addGroup(loginPanelLayout.createSequentialGroup()
                                 .addGap(59, 59, 59)
-                                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(usernameField)
-                                    .addComponent(passwordField)
-                                    .addComponent(usernameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createSequentialGroup()
-                                        .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(signUpBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(showPassChckBox)
+                                    .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(usernameField)
+                                        .addComponent(passwordField)
+                                        .addComponent(usernameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createSequentialGroup()
+                                            .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(signUpBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                         .addGap(0, 58, Short.MAX_VALUE))))
         );
         loginPanelLayout.setVerticalGroup(
@@ -216,7 +227,7 @@ public class loginFrame extends javax.swing.JFrame {
                 .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16)
                 .addComponent(loginLogo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(49, 49, 49)
                 .addComponent(usernameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -224,7 +235,9 @@ public class loginFrame extends javax.swing.JFrame {
                 .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(showPassChckBox)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(signUpBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -289,6 +302,17 @@ public class loginFrame extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_signUpBtn1MouseClicked
+
+    private void showPassChckBoxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_showPassChckBoxMouseClicked
+        // Show password check box button
+        
+        if(showPassChckBox.isSelected()) {
+            passwordField.setEchoChar((char)0);
+        }else {
+            passwordField.setEchoChar('*');
+        }
+        
+    }//GEN-LAST:event_showPassChckBoxMouseClicked
     
     
     
@@ -335,6 +359,7 @@ public class loginFrame extends javax.swing.JFrame {
     public static javax.swing.JPanel loginPanel;
     public javax.swing.JPasswordField passwordField;
     public javax.swing.JLabel passwordLabel;
+    public static javax.swing.JCheckBox showPassChckBox;
     public static javax.swing.JPanel sidePanel;
     public javax.swing.JLabel sidePanelLogo;
     public javax.swing.JButton signUpBtn1;
